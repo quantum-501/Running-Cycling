@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="refresh" content="1.5; url=index.html" />
+    <script defer src="script.js"></script>
+
+    <style>
+      body {
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 1200px;
+        overflow-y: scroll;
+        font-family: "Open Sans", sans-serif;
+        background-color: #f7f7f7;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      .load-wrapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 20px 20px 20px 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .spinner {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+      }
+
+      .bubble-1,
+      .bubble-2 {
+        position: absolute;
+        top: 0;
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        background-image: linear-gradient(145deg, #1cd9f1, #1fe1a3);
+        /* background-color: #1cd9f1; */
+      }
+
+      .bubble-2 {
+        top: auto;
+        bottom: 0;
+      }
+
+      .load-9 .spinner {
+        animation: loadingI 3s linear infinite;
+      }
+
+      .load-9 .bubble-1,
+      .load-9 .bubble-2 {
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .load-9 .bubble-2 {
+        animation-delay: -1s;
+      }
+
+      @keyframes loadingI {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="load-wrapp">
+      <div class="load-9">
+        <div class="spinner">
+          <div class="bubble-1"></div>
+          <div class="bubble-2"></div>
+          <div class="bubble-3"></div>
+        </div>
+        <br /><br />
+        <p><strong>L O A D I N G</strong></p>
+      </div>
+    </div>
+  </body>
+</html>
